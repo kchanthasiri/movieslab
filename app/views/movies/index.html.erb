@@ -1,0 +1,10 @@
+<h1>This is your list of movies</h1>
+
+<hr>
+<% @movies.each do |movies| %>
+		<p>Title: <%= movies.title %></p> 
+		<p>Description: <%= movies.description %></p> 
+		<p>Year: <%= movies.year_released %></p>
+		<%= link_to "Show Details", movie_path(movies.id) %><br>
+	<hr>
+<%end%>
